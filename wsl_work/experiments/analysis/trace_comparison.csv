@@ -1,0 +1,6 @@
+Trace,IPC,Cycles,Instructions,L1I_Accesses,L1I_Misses,L1I_Miss_Rate,L1D_Load_Accesses,L1D_Load_Misses,L1D_Miss_Rate,L2C_Load_Accesses,L2C_Load_Misses,L2C_Miss_Rate,LLC_Load_Accesses,LLC_Load_Misses,LLC_Miss_Rate,DRAM_Accesses,DRAM_Row_Buffer_Hits,DRAM_Row_Buffer_Misses,DRAM_Hit_Rate,Classification
+400.perlbench-41B,IPC:,instructions:,cumulative,ACCESS:,HIT:,0,ACCESS:,HIT:,0,ACCESS:,HIT:,0,ACCESS:,HIT:,0,HIT:,372,38076,.9675,Balanced
+401.bzip2-226B,IPC:,instructions:,cumulative,ACCESS:,HIT:,0,ACCESS:,HIT:,0,ACCESS:,HIT:,0,ACCESS:,HIT:,0,HIT:,8318,124977,6.2402,Balanced
+410.bwaves-945B,IPC:,instructions:,cumulative,ACCESS:,HIT:,0,ACCESS:,HIT:,0,ACCESS:,HIT:,0,ACCESS:,HIT:,0,HIT:,0,218,0,Balanced
+416.gamess-875B,IPC:,instructions:,cumulative,ACCESS:,HIT:,0,ACCESS:,HIT:,0,ACCESS:,HIT:,0,ACCESS:,HIT:,0,HIT:,14,939,1.4690,Balanced
+603.bwaves_s-891B,IPC:,instructions:,cumulative,ACCESS:,HIT:,0,ACCESS:,HIT:,0,ACCESS:,HIT:,0,ACCESS:,HIT:,0,HIT:,89186,1090619,7.5593,Balanced

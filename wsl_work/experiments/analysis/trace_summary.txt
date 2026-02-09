@@ -1,0 +1,77 @@
+================================================================================
+                    CHAMPSIM TRACE CHARACTERIZATION SUMMARY
+================================================================================
+
+PERFORMANCE OVERVIEW
+===================================================================================
+Trace                               IPC       Cycles        Instr  Classification
+===================================================================================
+400.perlbench-41B                 1.276     39184107     50000004        Balanced
+401.bzip2-226B                    1.629     30685510     50000000        Balanced
+410.bwaves-945B                    3.08     16233273     50000000   Compute-bound
+416.gamess-875B                   1.902     26291737     50000002   Compute-bound
+603.bwaves_s-891B                0.4207    118860960     50000003    Memory-bound
+
+CACHE HIERARCHY ANALYSIS
+===================================================================================
+Trace                           L1D Miss%  L2C Miss%  LLC Miss%     DRAM Acc
+===================================================================================
+400.perlbench-41B                   1.12%     27.54%     76.48%        31950
+401.bzip2-226B                      5.91%     23.96%     46.45%        43194
+410.bwaves-945B                     0.00%    100.00%    100.00%           36
+416.gamess-875B                     0.31%      2.23%     97.92%          800
+603.bwaves_s-891B                  58.86%    100.00%     99.99%      1159391
+
+DETAILED BREAKDOWN
+===================================================================================
+
+Trace: 400.perlbench-41B
+-------------------
+  IPC: 1.276
+  L1D: 8873576 accesses, 99287 misses (1.12% miss rate)
+  DRAM accesses: 31950
+
+Trace: 401.bzip2-226B
+-------------------
+  IPC: 1.629
+  L1D: 9261541 accesses, 547210 misses (5.91% miss rate)
+  DRAM accesses: 43194
+
+Trace: 410.bwaves-945B
+-------------------
+  IPC: 3.08
+  L1D: 7457257 accesses, 74 misses (0.00% miss rate)
+  DRAM accesses: 36
+
+Trace: 416.gamess-875B
+-------------------
+  IPC: 1.902
+  L1D: 11396236 accesses, 34922 misses (0.31% miss rate)
+  DRAM accesses: 800
+
+Trace: 603.bwaves_s-891B
+-------------------
+  IPC: 0.4207
+  L1D: 7665424 accesses, 4511731 misses (58.86% miss rate)
+  DRAM accesses: 1159391
+
+===================================================================================
+CLASSIFICATION & RECOMMENDATIONS
+===================================================================================
+
+400.perlbench-41B: BALANCED (IPC=1.276, L1D Miss=1.12%)
+  → Use for: General studies, shows both effects
+
+401.bzip2-226B: BALANCED (IPC=1.629, L1D Miss=5.91%)
+  → Use for: General studies, shows both effects
+
+410.bwaves-945B: COMPUTE-BOUND (IPC=3.08, L1D Miss=0.00%)
+  → Use for: Pipeline, port restrictions, branch prediction
+
+416.gamess-875B: COMPUTE-BOUND (IPC=1.902, L1D Miss=0.31%)
+  → Use for: Pipeline, port restrictions, branch prediction
+
+603.bwaves_s-891B: MEMORY-BOUND (IPC=0.4207, L1D Miss=58.86%)
+  → Use for: Cache latency, DRAM timing, prefetcher studies
+
+====================================================================================
